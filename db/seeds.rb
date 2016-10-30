@@ -5,6 +5,14 @@
 Issue.delete_all
 Politician.delete_all
 Interest.delete_all
+Category.delete_all
+
+# THE ORDER OF THE CATEGORY AND ISSUE CREATIONS ARE IMPORTANT. KEEP IN THIS ORDER. 
+Category.create(name: "Gun Laws")
+Category.create(name: "Immigration")
+Category.create(name: "LGBTQ")
+Category.create(name: "Economy")
+Category.create(name: "Healthcare")
 
 Issue.create(name: "Gun Laws", keywords: ["second amendment", "gun", "guns", "firearms", "fire arms", "shooting", "shootings", "mass shootings", "gun violence", "endgunviolence", "disarmhate", "2nd amendment", "gun violence prevention laws", "nra", "gun show loophole", "gun show", "mass shootings"], image: "issue_twitter_gunlaws.png")
 
